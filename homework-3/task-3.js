@@ -1,0 +1,23 @@
+'use strict';
+
+const findBestEmployee = function(employees) {
+  const keys = Object.keys(employees);
+  let max = 0;
+  let name;
+  for (const key of keys) {
+  if (max < employees[key]) {
+    max = employees[key];
+    name = key;
+  }
+}
+  return name;
+};
+
+console.log(
+  findBestEmployee({
+    ann: 29,
+    david: 35,
+    helen: 1,
+    lorence: 99,
+  }),
+);
